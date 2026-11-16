@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 08:43:18 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 14:43:00 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/16 14:55:43 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	PhoneBook::addContact()
 {
     std::string name;
     
-    
+    std::cout << "First Name ";
+    std::getline(std::cin, name);
+    _contacts[0].setFirstname(name);
 }
 
 void	searchContact();

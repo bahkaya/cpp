@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 08:43:18 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 14:57:47 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/16 14:59:33 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	PhoneBook::addContact()
     _contacts[0].setFirstname(name);
 }
 
-void	PhoneBook::searchContact();
+void	PhoneBook::searchContact()
 {
 }

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 07:49:16 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 08:20:04 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/16 08:22:13 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void		Contact::setLastname(std::string _Lastname)
 {
     _Lastname = lastname;
 }
-std::string	CONTACT::getLastname() const
+std::string	Contact::getLastname() const
 {
     return (_Lastname);
 }
@@ -32,7 +32,7 @@ void		Contact::setNickname(std::string _Nickname)
 {
     _Nickname = Nickname;
 }
-std::string	CONTACT::getNickname() const
+std::string	Contact::getNickname() const
 {
     return (_Nickname);
 }
@@ -40,15 +40,15 @@ void		Contact::setPhonenumber(std::string _Phonenumber)
 {
     _Phonenumber = phonenumber;
 }
-std::string	CONTACT::getPhonenumber() const
+std::string	Contact::getPhonenumber() const
 {
     return(_Phonenumber);
 }
-void		CONTACT::setDarkestsecret(std::string _Darkestsecret)
+void		Contact::setDarkestsecret(std::string _Darkestsecret)
 {
 	_Darkestsecret = darkestsecret;
 }
-std::string	CONTACT::getDarkestsecret() const
+std::string	Contact::getDarkestsecret() const
 {
 	return (_Darkestsecret);
 }

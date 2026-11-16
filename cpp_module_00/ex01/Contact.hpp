@@ -24,7 +24,7 @@ private:
 	std:: string	_Phonenumber;
 	std:: string	_Darkestsecret;
 public:
-	void		setFirstname(std::string _firstname);
+	void		setFirstname(std::string _Firstname);
 	std::string	getFirstname() const;
 	void		setLastname(std::string _Lastname);
 	std::string	getLastname() const;

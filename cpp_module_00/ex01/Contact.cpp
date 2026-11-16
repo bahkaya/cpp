@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 07:49:16 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 08:16:24 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/16 08:20:04 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		Contact::setFirstname(std::string _firstname)
 {
-        _Firstname = name;
+        _Firstname = Firstname;
 }
 std::string	Contact::getFirstname() const
 {
@@ -24,7 +24,7 @@ void		Contact::setLastname(std::string _Lastname)
 {
     _Lastname = lastname;
 }
-std::string	getLastname() const
+std::string	CONTACT::getLastname() const
 {
     return (_Lastname);
 }
@@ -32,7 +32,7 @@ void		Contact::setNickname(std::string _Nickname)
 {
     _Nickname = Nickname;
 }
-std::string	getNickname() const
+std::string	CONTACT::getNickname() const
 {
     return (_Nickname);
 }
@@ -40,15 +40,15 @@ void		Contact::setPhonenumber(std::string _Phonenumber)
 {
     _Phonenumber = phonenumber;
 }
-std::string	getPhonenumber() const
+std::string	CONTACT::getPhonenumber() const
 {
     return(_Phonenumber);
 }
-void		setDarkestsecret(std::string _Darkestsecret)
+void		CONTACT::setDarkestsecret(std::string _Darkestsecret)
 {
 	_Darkestsecret = darkestsecret;
 }
-std::string	getDarkestsecret() const
+std::string	CONTACT::getDarkestsecret() const
 {
-	return (_Darkestsecter);
+	return (_Darkestsecret);
 }

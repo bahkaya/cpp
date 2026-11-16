@@ -18,8 +18,9 @@
 class PhoneBook
 {
 private:
-	Contact Contact[8];
+	Contact _contacts[8];
 public:
+
 	void	addContact();
 	void	searchContact();
 };

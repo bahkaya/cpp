@@ -6,22 +6,12 @@
 /*   By: bahkaya <bahkaya@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 12:04:36 by bahkaya           #+#    #+#             */
-/*   Updated: 2026/11/15 22:59:19 by bahkaya          ###   ########.fr       */
+/*   Updated: 2026/11/16 20:34:16 by bahkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <unistd.h>
-
-int	ft_strlen(char *av)
-{
-	int	i;
-
-	i = 0;
-	while (av[i] != '\0')
-		i++;
-	return (i);
-}
 
 int	main(int ac, char **av)
 {

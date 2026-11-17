@@ -14,7 +14,17 @@
 
 int main()
 {
-    PhoneBook c;
-    c.addContact();
-    return (0);
+	PhoneBook c;
+	std::string command;
+	while(1)
+	{
+		std::getline(std::cin, command);
+		if (command == "ADD")
+			c.addContact();
+		else if (command == "SEARCH")
+			c.searchContact();
+		else if (command == "EXIT")
+			return(0);
+	}
+	return (0);
 }

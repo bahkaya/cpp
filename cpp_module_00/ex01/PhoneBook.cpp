@@ -59,9 +59,9 @@ void	PhoneBook::searchContact()
 				<< std::setw(10) << "Nick Name" << std::endl;
 	while(i != _count)
 	{
-		std::cout << std::setw(10) << i;
-		std::cout << std::setw(10) << _contacts[i].getFirstname().substr(0, 9);
-		std::cout << std::setw(10) << _contacts[i].getLastname().substr(0,9);
+		std::cout << std::setw(10) << i << "|";
+		std::cout << std::setw(10) << _contacts[i].getFirstname().substr(0, 9) << "|";
+		std::cout << std::setw(10) << _contacts[i].getLastname().substr(0,9) << "|";
 		std::cout << std::setw(10) << _contacts[i].getNickname().substr(0,9) << std::endl;
 		i++;
 	}

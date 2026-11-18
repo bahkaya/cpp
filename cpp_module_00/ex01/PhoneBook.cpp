@@ -51,6 +51,7 @@ void	PhoneBook::addContact()
 void	PhoneBook::searchContact()
 {
 	int	i;
+	std::string command;
 
 	i = 0;
 	std::cout	<< std::setw(10) << "Index" << "|" 
@@ -60,10 +61,20 @@ void	PhoneBook::searchContact()
 	while(i != _count)
 	{
 		std::cout << std::setw(10) << i << "|";
-		std::cout << std::setw(10) << _contacts[i].getFirstname().substr(0, 9) << "|";
-		std::cout << std::setw(10) << _contacts[i].getLastname().substr(0,9) << "|";
-		std::cout << std::setw(10) << _contacts[i].getNickname().substr(0,9) << std::endl;
+		if (_contacts[i].getFirstname().length() > 10)
+			std::cout << std::setw(10) << _contacts[i].getFirstname().substr(0, 9) + "." << "|";
+		else
+			std::cout << std::setw(10) << _contacts[i].getFirstname()<< "|";
+		if (_contacts[i].getLastname().length() > 10)
+			std::cout << std::setw(10) << _contacts[i].getLastname().substr(0,9) + "." << "|";
+		else
+			std::cout << std::setw(10) << _contacts[i].getLastname() << "|";
+		if (_contacts[i].getNickname().length() > 10)
+			std::cout << std::setw(10) << _contacts[i].getNickname().substr(0,9) + "." << std::endl;
+		else
+			std::cout << std::setw(10) << _contacts[i].getNickname() << std::endl;
 		i++;
 	}
-	
+	std::getline(cin, command);
+	if (std::isdigit(command) || )
 }

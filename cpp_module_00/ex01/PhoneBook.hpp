@@ -16,6 +16,7 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <iomanip>
+#include <cctype>
 
 class PhoneBook
 {
@@ -28,6 +29,7 @@ public:
 	PhoneBook();
 	void	addContact();
 	void	searchContact();
+	void	search_input(int command);
 };
 
 

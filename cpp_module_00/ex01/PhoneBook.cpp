@@ -75,6 +75,31 @@ void	PhoneBook::searchContact()
 			std::cout << std::setw(10) << _contacts[i].getNickname() << std::endl;
 		i++;
 	}
-	std::getline(cin, command);
-	if (std::isdigit(command) || )
+	std::cout << "Index: ";
+	std::getline(std::cin, command);
+	if (command.length() == 1)
+	{	
+		if (std::isdigit(command[0]))
+		{
+			command[0] -= 48;
+			if (command[0] < _count)
+				search_input(command[0]);
+			else
+				std::cout << "Contact number is not found" << std::endl;
+		}
+		else
+			std::cout << "Contact number must be digit" << std::endl;
+	}
+	else
+		std::cout << "Contact number must be between 1-8" << std::endl;
+}
+
+
+void	PhoneBook::search_input(int command)
+{
+	std::cout << "First Name: " << _contacts[command].getFirstname() << std::endl;
+	std::cout << "Last Name: " << _contacts[command].getLastname() << std::endl;
+	std::cout << "Nick Name: " << _contacts[command].getNickname() << std::endl;
+	std::cout << "Phone Number: " << _contacts[command].getPhonenumber() << std::endl;
+	std::cout << "Darkest Secret: " << _contacts[command].getDarkestsecret() << std::endl;
 }

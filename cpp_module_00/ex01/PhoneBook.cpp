@@ -109,8 +109,8 @@ void	PhoneBook::searchContact()
 int	PhoneBook::sytax_check(std::string name)
 {
 	if (name == " ")
-		return (1);
-	return (0);
+		return (0);
+	return (1);
 }
 
 void	PhoneBook::search_input(int command)

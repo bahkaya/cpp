@@ -17,28 +17,40 @@ PhoneBook::PhoneBook()
 	_index = 0;
 	_count = 0;
 }
+
 void	PhoneBook::addContact()
 {
 	std::string name;
 
 	std::cout << "First Name: ";
 	std::getline(std::cin, name);
+	if (!sytax_check(name))
+		return;
 	_contacts[_index].setFirstname(name);
 
 	std::cout << "Last Name: ";
+
 	std::getline(std::cin, name);
+	if (!sytax_check(name))
+		return;
 	_contacts[_index].setLastname(name);
 
 	std::cout << "Nick Name: ";
 	std::getline(std::cin, name);
+	if (!sytax_check(name))
+		return;
 	_contacts[_index].setNickname(name);
 
 	std::cout << "Phone Number: ";
 	std::getline(std::cin, name);
+	if (!sytax_check(name))
+		return;
 	_contacts[_index].setPhonenumber(name);
 
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, name);
+	if (!sytax_check(name))
+		return;
 	_contacts[_index].setDarkestsecret(name);
 
 	_index++;
@@ -94,6 +106,12 @@ void	PhoneBook::searchContact()
 		std::cout << "Contact number must be between 1-8" << std::endl;
 }
 
+int	PhoneBook::sytax_check(std::string name)
+{
+	if (name == " ")
+		return (1);
+	return (0);
+}
 
 void	PhoneBook::search_input(int command)
 {

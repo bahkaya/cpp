@@ -1,0 +1,5 @@
+7. search_input public olmamalı.
+Sadece searchContact içinden çağrılıyor. Subject: “anything that will always be used inside a class is private.” private: altına taşı. Ayrıca:
+
+Adı diğer fonksiyonlarınla aynı stilde olsun, örneğin displayContact. Şu an searchContact camelCase, search_input ise alt çizgili.
+Parametre adı command yerine index olsun.

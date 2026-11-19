@@ -30,6 +30,7 @@ public:
 	void	addContact();
 	void	searchContact();
 	void	search_input(int command);
+	int		sytax_check(std::string name);
 };
 
 

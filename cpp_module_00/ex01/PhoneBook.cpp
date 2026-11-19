@@ -29,7 +29,6 @@ void	PhoneBook::addContact()
 	_contacts[_index].setFirstname(name);
 
 	std::cout << "Last Name: ";
-
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
 		return;
@@ -108,6 +107,8 @@ void	PhoneBook::searchContact()
 
 int	PhoneBook::sytax_check(std::string name)
 {
+	if(name.empty())
+		return (0);
 	if (name == " ")
 		return (0);
 	return (1);

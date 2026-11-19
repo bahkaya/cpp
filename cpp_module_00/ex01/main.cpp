@@ -19,6 +19,8 @@ int main()
 	while(1)
 	{
 		std::getline(std::cin, command);
+		if (std::cin.eof())
+			return;
 		if (command == "ADD")
 			c.addContact();
 		else if (command == "SEARCH")

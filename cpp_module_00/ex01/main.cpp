@@ -20,7 +20,7 @@ int main()
 	{
 		std::getline(std::cin, command);
 		if (std::cin.eof())
-			return;
+			return (0);
 		if (command == "ADD")
 			c.addContact();
 		else if (command == "SEARCH")

@@ -25,31 +25,31 @@ void	PhoneBook::addContact()
 	std::cout << "First Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		PhoneBook::addContact();
+		return;
 	_contacts[_index].setFirstname(name);
 
 	std::cout << "Last Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		PhoneBook::addContact();
+		return;
 	_contacts[_index].setLastname(name);
 
 	std::cout << "Nick Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		PhoneBook::addContact();
+		return;
 	_contacts[_index].setNickname(name);
 
 	std::cout << "Phone Number: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		PhoneBook::addContact();
+		return;
 	_contacts[_index].setPhonenumber(name);
 
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		PhoneBook::addContact();
+		return;
 	_contacts[_index].setDarkestsecret(name);
 
 	_index++;

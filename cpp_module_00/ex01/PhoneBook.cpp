@@ -25,31 +25,31 @@ void	PhoneBook::addContact()
 	std::cout << "First Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		return;
+		PhoneBook::addContact();
 	_contacts[_index].setFirstname(name);
 
 	std::cout << "Last Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		return;
+		PhoneBook::addContact();
 	_contacts[_index].setLastname(name);
 
 	std::cout << "Nick Name: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		return;
+		PhoneBook::addContact();
 	_contacts[_index].setNickname(name);
 
 	std::cout << "Phone Number: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		return;
+		PhoneBook::addContact();
 	_contacts[_index].setPhonenumber(name);
 
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, name);
 	if (!sytax_check(name))
-		return;
+		PhoneBook::addContact();
 	_contacts[_index].setDarkestsecret(name);
 
 	_index++;
@@ -108,9 +108,15 @@ void	PhoneBook::searchContact()
 int	PhoneBook::sytax_check(std::string name)
 {
 	if(name.empty())
+	{
+		std::cout << "Field cannot be empty. " << std::endl;
 		return (0);
+	}
 	if (name == " ")
+	{
+		std::cout << "Field cannot be empty. " << std::endl;
 		return (0);
+	}
 	return (1);
 }
 

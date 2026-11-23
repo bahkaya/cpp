@@ -74,9 +74,9 @@ void	PhoneBook::searchContact()
 		std::cout << "Phonebook is empty" << std::endl;
 		return;
 	}
-	std::cout	<< std::setw(10) << "Index" << "|" 
-				<< std::setw(10) << "First Name" << "|" 
-				<< std::setw(10) << "Last Name" << "|" 
+	std::cout	<< std::setw(10) << "Index" << "|"
+				<< std::setw(10) << "First Name" << "|"
+				<< std::setw(10) << "Last Name" << "|"
 				<< std::setw(10) << "Nick Name" << std::endl;
 	while(i != _count)
 	{
@@ -116,12 +116,17 @@ void	PhoneBook::searchContact()
 
 int	PhoneBook::sytax_check(std::string name)
 {
+	int	i;
+
+	i = 0;
 	if(name.empty())
 	{
 		std::cout << "Field cannot be empty. " << std::endl;
 		return (0);
 	}
-	if (name == " ")
+	while(name[i] != '\0' && std::isspace(name[i]))
+		i++;
+	if (name[i] == '\0')
 	{
 		std::cout << "Field cannot be empty. " << std::endl;
 		return (0);

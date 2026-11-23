@@ -69,6 +69,11 @@ void	PhoneBook::searchContact()
 	std::string command;
 
 	i = 0;
+	if (_count == 0)
+	{
+		std::cout << "Phonebook is empty" << std::endl;
+		return;
+	}
 	std::cout	<< std::setw(10) << "Index" << "|" 
 				<< std::setw(10) << "First Name" << "|" 
 				<< std::setw(10) << "Last Name" << "|" 
@@ -106,7 +111,7 @@ void	PhoneBook::searchContact()
 			std::cout << "Contact number must be digit" << std::endl;
 	}
 	else
-		std::cout << "Contact number must be between 1-8" << std::endl;
+		std::cout << "Contact number must be between 0-7" << std::endl;
 }
 
 int	PhoneBook::sytax_check(std::string name)

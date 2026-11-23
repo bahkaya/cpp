@@ -18,6 +18,7 @@ int main()
 	std::string command;
 	while(1)
 	{
+		std::cout << "Enter Command (ADD / SEARCH / EXIT) :";
 		std::getline(std::cin, command);
 		if (std::cin.eof())
 			return (0);

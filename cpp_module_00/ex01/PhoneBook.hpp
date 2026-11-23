@@ -27,11 +27,9 @@ private:
 	int		sytax_check(std::string name);
 	void	search_input(int command);
 public:
-	
 	PhoneBook();
 	void	addContact();
 	void	searchContact();
-
 };
 
 

@@ -24,13 +24,13 @@ private:
 	Contact _contacts[8];
 	int		_index;
 	int		_count;
-	void	searchContact();
+
 	void	search_input(int command);
 public:
 	
 	PhoneBook();
 	void	addContact();
-
+	void	searchContact();
 	int		sytax_check(std::string name);
 };
 

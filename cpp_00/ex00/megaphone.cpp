@@ -15,15 +15,15 @@
 
 int	main(int ac, char **av)
 {
-	std::string str = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	std::string Str = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	if (ac == 1)
 	{
-		std::cout << str << std::endl;
+		std::cout << Str << std::endl;
 		return (0);
 	}
 	int	i;
 	int	k;
-	int upper_case;
+	int UpperCase;
 
 	i = 1;
 	k = 0;
@@ -35,8 +35,8 @@ int	main(int ac, char **av)
 		{
 			if(av[i][k] >= 97 && av[i][k] <= 122)
 			{
-				upper_case = av[i][k] - 32;
-				write(1, &upper_case, 1);
+				UpperCase = av[i][k] - 32;
+				write(1, &UpperCase, 1);
 			}
 			else
 			{

@@ -14,19 +14,19 @@
 
 int main()
 {
-	PhoneBook c;
-	std::string command;
+	PhoneBook MyPhoneBook;
+	std::string Command;
 	while(1)
 	{
 		std::cout << "Enter Command (ADD / SEARCH / EXIT) :";
-		std::getline(std::cin, command);
+		std::getline(std::cin, Command);
 		if (std::cin.eof())
 			return (0);
-		if (command == "ADD")
-			c.addContact();
-		else if (command == "SEARCH")
-			c.searchContact();
-		else if (command == "EXIT")
+		if (Command == "ADD")
+			MyPhoneBook.AddContact();
+		else if (Command == "SEARCH")
+			MyPhoneBook.SearchContact();
+		else if (Command == "EXIT")
 			return(0);
 	}
 	return (0);

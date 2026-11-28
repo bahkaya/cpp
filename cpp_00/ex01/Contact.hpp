@@ -18,22 +18,22 @@
 class Contact
 {
 private:
-	std:: string	Firstname;
-	std:: string	Lastname;
-	std:: string	Nickname;
-	std:: string	Phonenumber;
-	std:: string	Darkestsecret;
+	std::string	FirstName;
+	std::string	LastName;
+	std::string	Nickname;
+	std::string	PhoneNumber;
+	std::string	DarkestSecret;
 public:
-	void		setFirstname(std::string Firstname);
-	std::string	getFirstname() const;
-	void		setLastname(std::string Lastname);
-	std::string	getLastname() const;
-	void		setNickname(std::string Nickname);
-	std::string	getNickname() const;
-	void		setPhonenumber(std::string Phonenumber);
-	std::string	getPhonenumber() const;
-	void		setDarkestsecret(std::string Darkestsecret);
-	std::string	getDarkestsecret() const;
+	void		SetFirstName(std::string FirstName);
+	std::string	GetFirstName() const;
+	void		SetLastName(std::string LastName);
+	std::string	GetLastName() const;
+	void		SetNickname(std::string Nickname);
+	std::string	GetNickname() const;
+	void		SetPhoneNumber(std::string PhoneNumber);
+	std::string	GetPhoneNumber() const;
+	void		SetDarkestSecret(std::string DarkestSecret);
+	std::string	GetDarkestSecret() const;
 };
 
 

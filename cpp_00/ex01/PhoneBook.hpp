@@ -21,15 +21,15 @@
 class PhoneBook
 {
 private:
-	Contact contacts[8];
-	int		index;
-	int		count;
-	int		sytax_check(std::string name);
-	void	search_input(int command);
+	Contact Contacts[8];
+	int		Index;
+	int		Count;
+	int		SyntaxCheck(std::string Name);
+	void	SearchInput(int Command);
 public:
 	PhoneBook();
-	void	addContact();
-	void	searchContact();
+	void	AddContact();
+	void	SearchContact();
 };
 
 

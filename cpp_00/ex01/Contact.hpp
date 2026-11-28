@@ -18,21 +18,21 @@
 class Contact
 {
 private:
-	std:: string	_Firstname;
-	std:: string	_Lastname;
-	std:: string	_Nickname;
-	std:: string	_Phonenumber;
-	std:: string	_Darkestsecret;
+	std:: string	Firstname;
+	std:: string	Lastname;
+	std:: string	Nickname;
+	std:: string	Phonenumber;
+	std:: string	Darkestsecret;
 public:
-	void		setFirstname(std::string _Firstname);
+	void		setFirstname(std::string Firstname);
 	std::string	getFirstname() const;
-	void		setLastname(std::string _Lastname);
+	void		setLastname(std::string Lastname);
 	std::string	getLastname() const;
-	void		setNickname(std::string _Nickname);
+	void		setNickname(std::string Nickname);
 	std::string	getNickname() const;
-	void		setPhonenumber(std::string _Phonenumber);
+	void		setPhonenumber(std::string Phonenumber);
 	std::string	getPhonenumber() const;
-	void		setDarkestsecret(std::string _Darkestsecret);
+	void		setDarkestsecret(std::string Darkestsecret);
 	std::string	getDarkestsecret() const;
 };
 

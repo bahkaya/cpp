@@ -14,41 +14,50 @@
 
 void		Contact::setFirstname(std::string firstname)
 {
-        _Firstname = firstname;
+		Firstname = firstname;
 }
+
 std::string	Contact::getFirstname() const
 {
-    return(_Firstname);
+	return(Firstname);
 }
+
 void		Contact::setLastname(std::string lastname)
 {
-    _Lastname = lastname;
+	Lastname = lastname;
 }
+
 std::string	Contact::getLastname() const
 {
-    return (_Lastname);
+	return (Lastname);
 }
+
 void		Contact::setNickname(std::string nickname)
 {
-    _Nickname = nickname;
+	Nickname = nickname;
 }
+
 std::string	Contact::getNickname() const
 {
-    return (_Nickname);
+	return (Nickname);
 }
+
 void		Contact::setPhonenumber(std::string phonenumber)
 {
-    _Phonenumber = phonenumber;
+	Phonenumber = phonenumber;
 }
+
 std::string	Contact::getPhonenumber() const
 {
-    return(_Phonenumber);
+	return(Phonenumber);
 }
+
 void		Contact::setDarkestsecret(std::string darkestsecret)
 {
-	_Darkestsecret = darkestsecret;
+	Darkestsecret = darkestsecret;
 }
+
 std::string	Contact::getDarkestsecret() const
 {
-	return (_Darkestsecret);
+	return (Darkestsecret);
 }

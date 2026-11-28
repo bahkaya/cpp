@@ -21,9 +21,9 @@
 class PhoneBook
 {
 private:
-	Contact _contacts[8];
-	int		_index;
-	int		_count;
+	Contact contacts[8];
+	int		index;
+	int		count;
 	int		sytax_check(std::string name);
 	void	search_input(int command);
 public:

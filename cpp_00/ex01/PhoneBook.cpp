@@ -14,8 +14,8 @@
 
 PhoneBook::PhoneBook()
 {
-	_index = 0;
-	_count = 0;
+	index = 0;
+	count = 0;
 }
 
 void	PhoneBook::addContact()
@@ -50,17 +50,17 @@ void	PhoneBook::addContact()
 	std::getline(std::cin, darkest_secret);
 	if (!sytax_check(darkest_secret))
 		return;
-	_contacts[_index].setFirstname(name);
-	_contacts[_index].setLastname(last_name);
-	_contacts[_index].setNickname(nick_name);
-	_contacts[_index].setPhonenumber(phone_number);
-	_contacts[_index].setDarkestsecret(darkest_secret);
+	contacts[index].setFirstname(name);
+	contacts[index].setLastname(last_name);
+	contacts[index].setNickname(nick_name);
+	contacts[index].setPhonenumber(phone_number);
+	contacts[index].setDarkestsecret(darkest_secret);
 
-	_index++;
-	if(_index % 8 == 0)
-		_index = 0;
-	if(_count < 8)
-		_count++;
+	index++;
+	if(index % 8 == 0)
+		index = 0;
+	if(count < 8)
+		count++;
 }
 
 void	PhoneBook::searchContact()
@@ -69,7 +69,7 @@ void	PhoneBook::searchContact()
 	std::string command;
 
 	i = 0;
-	if (_count == 0)
+	if (count == 0)
 	{
 		std::cout << "Phonebook is empty" << std::endl;
 		return;
@@ -78,21 +78,21 @@ void	PhoneBook::searchContact()
 				<< std::setw(10) << "First Name" << "|"
 				<< std::setw(10) << "Last Name" << "|"
 				<< std::setw(10) << "Nick Name" << std::endl;
-	while(i != _count)
+	while(i != count)
 	{
 		std::cout << std::setw(10) << i << "|";
-		if (_contacts[i].getFirstname().length() > 10)
-			std::cout << std::setw(10) << _contacts[i].getFirstname().substr(0, 9) + "." << "|";
+		if (contacts[i].getFirstname().length() > 10)
+			std::cout << std::setw(10) << contacts[i].getFirstname().substr(0, 9) + "." << "|";
 		else
-			std::cout << std::setw(10) << _contacts[i].getFirstname()<< "|";
-		if (_contacts[i].getLastname().length() > 10)
+			std::cout << std::setw(10) << contacts[i].getFirstname()<< "|";
+		if (contacts[i].getLastname().length() > 10)
 			std::cout << std::setw(10) << _contacts[i].getLastname().substr(0,9) + "." << "|";
 		else
-			std::cout << std::setw(10) << _contacts[i].getLastname() << "|";
-		if (_contacts[i].getNickname().length() > 10)
-			std::cout << std::setw(10) << _contacts[i].getNickname().substr(0,9) + "." << std::endl;
+			std::cout << std::setw(10) << contacts[i].getLastname() << "|";
+		if (contacts[i].getNickname().length() > 10)
+			std::cout << std::setw(10) << contacts[i].getNickname().substr(0,9) + "." << std::endl;
 		else
-			std::cout << std::setw(10) << _contacts[i].getNickname() << std::endl;
+			std::cout << std::setw(10) << contacts[i].getNickname() << std::endl;
 		i++;
 	}
 	std::cout << "Index: ";
@@ -102,7 +102,7 @@ void	PhoneBook::searchContact()
 		if (std::isdigit(command[0]))
 		{
 			command[0] -= 48;
-			if (command[0] < _count)
+			if (command[0] < count)
 				search_input(command[0]);
 			else
 				std::cout << "Contact number is not found" << std::endl;
@@ -136,9 +136,9 @@ int	PhoneBook::sytax_check(std::string name)
 
 void	PhoneBook::search_input(int command)
 {
-	std::cout << "First Name: " << _contacts[command].getFirstname() << std::endl;
-	std::cout << "Last Name: " << _contacts[command].getLastname() << std::endl;
-	std::cout << "Nick Name: " << _contacts[command].getNickname() << std::endl;
-	std::cout << "Phone Number: " << _contacts[command].getPhonenumber() << std::endl;
-	std::cout << "Darkest Secret: " << _contacts[command].getDarkestsecret() << std::endl;
+	std::cout << "First Name: " << contacts[command].getFirstname() << std::endl;
+	std::cout << "Last Name: " << contacts[command].getLastname() << std::endl;
+	std::cout << "Nick Name: " << contacts[command].getNickname() << std::endl;
+	std::cout << "Phone Number: " << contacts[command].getPhonenumber() << std::endl;
+	std::cout << "Darkest Secret: " << contacts[command].getDarkestsecret() << std::endl;
 }

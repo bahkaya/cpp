@@ -25,6 +25,7 @@ private:
 	int		Index;
 	int		Count;
 	int		SyntaxCheck(std::string Name);
+	int		PhoneNumberCheck(std::string PhoneNumber);
 	void	SearchInput(int Command);
 public:
 	PhoneBook();

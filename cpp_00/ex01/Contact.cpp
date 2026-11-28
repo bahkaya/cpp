@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: bahkaya <bahkaya@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 07:49:16 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 08:27:26 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/28 15:54:06 by bahkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void		Contact::SetFirstName(std::string FirstName)
+void		Contact::SetFirstName(std::string CreateName)
 {
-		this->FirstName = FirstName;
+		FirstName = CreateName;
 }
 
 std::string	Contact::GetFirstName() const
@@ -22,9 +22,9 @@ std::string	Contact::GetFirstName() const
 	return (FirstName);
 }
 
-void		Contact::SetLastName(std::string LastName)
+void		Contact::SetLastName(std::string CreateLastName)
 {
-	this->LastName = LastName;
+	LastName = CreateLastName;
 }
 
 std::string	Contact::GetLastName() const
@@ -32,9 +32,9 @@ std::string	Contact::GetLastName() const
 	return (LastName);
 }
 
-void		Contact::SetNickname(std::string Nickname)
+void		Contact::SetNickname(std::string CreateNickname)
 {
-	this->Nickname = Nickname;
+	Nickname = CreateNickname;
 }
 
 std::string	Contact::GetNickname() const
@@ -42,9 +42,9 @@ std::string	Contact::GetNickname() const
 	return (Nickname);
 }
 
-void		Contact::SetPhoneNumber(std::string PhoneNumber)
+void		Contact::SetPhoneNumber(std::string CreatePhoneNumber)
 {
-	this->PhoneNumber = PhoneNumber;
+	PhoneNumber = CreatePhoneNumber;
 }
 
 std::string	Contact::GetPhoneNumber() const
@@ -52,9 +52,9 @@ std::string	Contact::GetPhoneNumber() const
 	return (PhoneNumber);
 }
 
-void		Contact::SetDarkestSecret(std::string DarkestSecret)
+void		Contact::SetDarkestSecret(std::string CreateDarkestSecret)
 {
-	this->DarkestSecret = DarkestSecret;
+	DarkestSecret = CreateDarkestSecret;
 }
 
 std::string	Contact::GetDarkestSecret() const

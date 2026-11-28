@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: bahkaya <bahkaya@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 08:43:18 by codespace         #+#    #+#             */
-/*   Updated: 2026/11/16 14:59:33 by codespace        ###   ########.fr       */
+/*   Updated: 2026/11/28 15:56:41 by bahkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	PhoneBook::AddContact()
 	std::cout << "Phone Number: ";
 	std::getline(std::cin, PhoneNumber);
 	if (!SyntaxCheck(PhoneNumber))
+		return;
+	if (!PhoneNumberCheck(PhoneNumber))
 		return;
 
 	std::cout << "Darkest Secret: ";
@@ -130,6 +132,23 @@ int	PhoneBook::SyntaxCheck(std::string Name)
 	{
 		std::cout << "Field cannot be empty. " << std::endl;
 		return (0);
+	}
+	return (1);
+}
+
+int	PhoneBook::PhoneNumberCheck(std::string PhoneNumber)
+{
+	int	i;
+
+	i = 0;
+	while (PhoneNumber[i] != '\0')
+	{
+		if (!std::isdigit(PhoneNumber[i]))
+		{
+			std::cout << "Phone number can only be digit" << std::endl;
+			return (0);
+		}
+		i++;
 	}
 	return (1);
 }

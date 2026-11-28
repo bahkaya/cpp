@@ -24,15 +24,15 @@ private:
 	std::string	PhoneNumber;
 	std::string	DarkestSecret;
 public:
-	void		SetFirstName(std::string FirstName);
+	void		SetFirstName(std::string CreateName);
 	std::string	GetFirstName() const;
-	void		SetLastName(std::string LastName);
+	void		SetLastName(std::string CreateLastName);
 	std::string	GetLastName() const;
-	void		SetNickname(std::string Nickname);
+	void		SetNickname(std::string CreateNickname);
 	std::string	GetNickname() const;
-	void		SetPhoneNumber(std::string PhoneNumber);
+	void		SetPhoneNumber(std::string CreatePhoneNumber);
 	std::string	GetPhoneNumber() const;
-	void		SetDarkestSecret(std::string DarkestSecret);
+	void		SetDarkestSecret(std::string CreateDarkestSecret);
 	std::string	GetDarkestSecret() const;
 };
 
